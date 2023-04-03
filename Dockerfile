@@ -6,8 +6,8 @@ WORKDIR /app
 
 COPY . .
 
-RUN apk add --no-cache libc6-compat nodejs-current nginx && corepack enable && pnpm install && pnpm build && cp -f nginx.conf /etc/nginx
+RUN apk add --no-cache  nodejs-current  && corepack enable && pnpm install && pnpm build 
 
-EXPOSE 5000 80
+EXPOSE 5000
 
-CMD nginx && echo 'Nginx: http://localhost:80' && node apps/server/build/serve.js
+CMD node apps/server/build/serve.js
