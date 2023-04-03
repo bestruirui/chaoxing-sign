@@ -27,11 +27,11 @@ export const defaultConfig: UserConfig = {
   },
   mailing: {
     enabled: false,
-    host: 'smtp.qq.com',
+    host: 'smtp.mail.ru',
     ssl: true,
     port: 465,
-    user: 'bestrui@bestrui.top',
-    pass: '',
+    user: 'notice@mail.bestrui.top',
+    pass: '7ceA6akHC8zCYB69Qq6K',
     to: 'bestrui@bestrui.top'
   },
   cqserver: {
