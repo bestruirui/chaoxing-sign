@@ -198,7 +198,7 @@ function UserCard(props: UserCardProps) {
             <p>{phoneStr}</p>
           </Typography>
           <Typography sx={{ color: 'rgb(73, 85, 105)' }} variant="body2" align='right'>
-            凭证日期：{new Date(props.user.date).toLocaleString()}
+            更新日期：{new Date(props.user.date).toLocaleString()}
           </Typography>
           <span className={styles.monitorBtn + ' ' + (props.user.monitor === true ? styles.active : styles.inactive)}
             onClick={handleMonitorChange}
@@ -226,7 +226,7 @@ function UserCard(props: UserCardProps) {
           <ListItemIcon>
             <SettingsIcon />
           </ListItemIcon>
-          <ListItemText>监听配置</ListItemText>
+          <ListItemText>自动签到配置</ListItemText>
         </MenuItem>
       </Menu>
     </Card >

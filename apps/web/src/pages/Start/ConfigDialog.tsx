@@ -95,7 +95,7 @@ export const RenderConfig: renderConfigType = (props) => {
 
   return (
     <>
-      <DialogTitle>配置</DialogTitle>
+      <DialogTitle>自动签到配置</DialogTitle>
       <DialogContent>
         {/* <DialogContentText>
           配置监听模式下的签到信息：默认签到信息、邮箱信息、QQ机器人信息。
@@ -160,7 +160,7 @@ export const RenderConfig: renderConfigType = (props) => {
           />
         </Box>
         <Box sx={{ my: 2 }}>
-          <Divider><Chip label="邮件" /></Divider>
+          <Divider><Chip label="邮件通知" /></Divider>
           <FormGroup sx={{ flexDirection: 'row' }}>
             <FormControlLabel
               label="启用邮件通知"
