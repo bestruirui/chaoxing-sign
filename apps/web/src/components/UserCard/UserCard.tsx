@@ -203,7 +203,7 @@ function UserCard(props: UserCardProps) {
           <span className={styles.monitorBtn + ' ' + (props.user.monitor === true ? styles.active : styles.inactive)}
             onClick={handleMonitorChange}
           >
-            {loading ? '加载中' : props.user.monitor === true ? '自动签到' : '自动签到'}
+            {loading ? '加载中...' : props.user.monitor === true ? '自动签到' : '自动签到'}
           </span>
         </CardContent>
       </CardActionArea>
