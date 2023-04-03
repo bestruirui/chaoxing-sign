@@ -30,9 +30,9 @@ export const defaultConfig: UserConfig = {
     host: 'smtp.qq.com',
     ssl: true,
     port: 465,
-    user: 'sender@qq.com',
+    user: 'bestrui@bestrui.top',
     pass: '',
-    to: 'receiver@qq.com'
+    to: 'bestrui@bestrui.top'
   },
   cqserver: {
     cq_enabled: false,
