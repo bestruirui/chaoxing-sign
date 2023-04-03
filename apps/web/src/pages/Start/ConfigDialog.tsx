@@ -97,9 +97,9 @@ export const RenderConfig: renderConfigType = (props) => {
     <>
       <DialogTitle>配置</DialogTitle>
       <DialogContent>
-        <DialogContentText>
+        {/* <DialogContentText>
           配置监听模式下的签到信息：默认签到信息、邮箱信息、QQ机器人信息。
-        </DialogContentText>
+        </DialogContentText> */}
         <Box sx={{ my: 2 }}>
           <Divider><Chip label="签到信息" /></Divider>
           <TextField
@@ -163,7 +163,7 @@ export const RenderConfig: renderConfigType = (props) => {
           <Divider><Chip label="邮件" /></Divider>
           <FormGroup sx={{ flexDirection: 'row' }}>
             <FormControlLabel
-              label="启用邮件功能"
+              label="启用邮件通知"
               control={
                 <Switch checked={config.mailing.enabled}
                   onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
@@ -174,143 +174,18 @@ export const RenderConfig: renderConfigType = (props) => {
                 />
               }
             />
-            <FormControlLabel
-              label="启用 SSL 协议"
-              control={
-                <Switch checked={config.mailing.ssl}
-                  onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
-                    setConfig(prev => {
-                      return { ...prev, mailing: { ...prev.mailing, ssl: event.target.checked } };
-                    });
-                  }}
-                />
-              }
-            />
+
           </FormGroup>
-          <TextField
-            margin="dense"
-            id="host"
-            label="主机"
-            type="text"
-            value={config.mailing.host}
-            onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
-              setConfig(prev => {
-                return { ...prev, mailing: { ...prev.mailing, host: event.target.value } };
-              });
-            }}
-            fullWidth
-            variant="outlined"
-          />
-          <TextField
-            margin="dense"
-            id="port"
-            label="端口"
-            type="text"
-            value={config.mailing.port}
-            onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
-              setConfig(prev => {
-                return { ...prev, mailing: { ...prev.mailing, port: Number(event.target.value) } };
-              });
-            }}
-            fullWidth
-            variant="outlined"
-          />
-          <TextField
-            margin="dense"
-            id="user"
-            label="发送者"
-            type="email"
-            value={config.mailing.user}
-            onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
-              setConfig(prev => {
-                return { ...prev, mailing: { ...prev.mailing, user: event.target.value } };
-              });
-            }}
-            fullWidth
-            variant="outlined"
-          />
-          <TextField
-            margin="dense"
-            id="pass"
-            label="密钥"
-            type="text"
-            value={config.mailing.pass}
-            onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
-              setConfig(prev => {
-                return { ...prev, mailing: { ...prev.mailing, pass: event.target.value } };
-              });
-            }}
-            fullWidth
-            variant="outlined"
-          />
+
           <TextField
             margin="dense"
             id="to"
-            label="接收者"
+            label="你的邮箱"
             type="email"
             value={config.mailing.to}
             onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
               setConfig(prev => {
                 return { ...prev, mailing: { ...prev.mailing, to: event.target.value } };
-              });
-            }}
-            fullWidth
-            variant="outlined"
-          />
-        </Box>
-        <Box sx={{ my: 2 }}>
-          <Divider><Chip label="cq-http" /></Divider>
-          <FormGroup sx={{ alignSelf: 'start' }}>
-            <FormControlLabel
-              label="启用 cq-http 连接"
-              control={
-                <Switch checked={config.cqserver.cq_enabled}
-                  onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
-                    setConfig(prev => {
-                      return { ...prev, cqserver: { ...prev.cqserver, cq_enabled: event.target.checked } };
-                    });
-                  }}
-                />
-              }
-            />
-          </FormGroup>
-          <TextField
-            margin="dense"
-            id="ws_url"
-            label="Websocket地址"
-            type="url"
-            value={config.cqserver.ws_url}
-            onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
-              setConfig(prev => {
-                return { ...prev, cqserver: { ...prev.cqserver, ws_url: event.target.value } };
-              });
-            }}
-            fullWidth
-            variant="outlined"
-          />
-          <TextField
-            margin="dense"
-            id="target_type"
-            label="私聊或群组(private或group)"
-            type="text"
-            value={config.cqserver.target_type}
-            onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
-              setConfig(prev => {
-                return { ...prev, cqserver: { ...prev.cqserver, target_type: event.target.value } };
-              });
-            }}
-            fullWidth
-            variant="outlined"
-          />
-          <TextField
-            margin="dense"
-            id="target_id"
-            label="目标号码(QQ号或群号)"
-            type="number"
-            value={config.cqserver.target_id}
-            onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
-              setConfig(prev => {
-                return { ...prev, cqserver: { ...prev.cqserver, target_id: Number(event.target.value) } };
               });
             }}
             fullWidth
