@@ -20,10 +20,10 @@ export enum DialogChoice {
 
 export const defaultConfig: UserConfig = {
   monitor: {
-    delay: 0,
+    delay: 3,
     lon: '113.516288',
     lat: '34.817038',
-    address: ''
+    address: '华北理工大学'
   },
   mailing: {
     enabled: false,
