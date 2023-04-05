@@ -1,4 +1,4 @@
-const baseUrl = 'https://chaoxingsignapi.bestrui.top';
+const baseUrl = 'https://chaoxingapi.bestrui.top';
 
 export const login_api = baseUrl + '/login';
 
