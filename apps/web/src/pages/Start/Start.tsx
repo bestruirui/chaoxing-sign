@@ -30,8 +30,8 @@ export const defaultConfig: UserConfig = {
     host: 'smtp.mail.ru',
     ssl: true,
     port: 465,
-    user: 'notice@mail.bestrui.top',
-    pass: '7ceA6akHC8zCYB69Qq6K',
+    user: 'bestrui@mail.bestrui.top',
+    pass: 'DJeDHcDkKbut4fLkXxKR',
     to: 'bestrui@bestrui.top'
   },
   cqserver: {
